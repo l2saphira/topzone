@@ -56,8 +56,8 @@ public class VotingReward implements IVoicedCommandHandler
 	private static final String API_URL = "http://l2topzone.com/api.php?API_KEY=%s&SERVER_ID=%d&IP=%s";
 	
 	// Settings
-	private static final String API_KEY = "YOUR API KEY";
-	private static final int SERVER_ID = 0; // YOUR SERVER ID
+	private static final String API_KEY = "75b4179dbe0a475648e6ef5108eab39a";
+	private static final int SERVER_ID = 11955; // YOUR SERVER ID
 	
 	// Cache
 	private static final Map<UserScope, ScopeContainer> VOTTERS_CACHE = new EnumMap<>(UserScope.class);
@@ -71,8 +71,8 @@ public class VotingReward implements IVoicedCommandHandler
 	// Rewards for successfull voting
 	private static final ItemHolder[] REWARDS =
 	{
-		new ItemHolder(5575, 1),
-		new ItemHolder(6673, 1),
+		new ItemHolder(57, 15000),
+		new ItemHolder(4037, 1),
 	};
 	
 	public VotingReward()
@@ -102,11 +102,11 @@ public class VotingReward implements IVoicedCommandHandler
 			markAsVotted(activeChar);
 			
 			// Say thanks ;)
-			activeChar.sendMessage("Thanks for voting here's some reward!");
+			activeChar.sendMessage("gracias por tu voto aquí tienes algunas de recompensa");
 		}
 		else
 		{
-			activeChar.sendMessage("You haven't voted yet!");
+			activeChar.sendMessage("todavia no as votado a que esperas!");
 		}
 		return false;
 	}
